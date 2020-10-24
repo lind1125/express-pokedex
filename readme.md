@@ -22,12 +22,21 @@ We'll be using an existing application that uses the [PokeAPI](http://pokeapi.co
 
 - After setup, **STOP**. You're using an existing application, so make sure to read the code and ensure what the application does. Some questions you may want to ask yourself:
   - How does the app retrieve a list of Pokemon?
-  - How many Pokemon does the API call retrieve? Why that many?
+    - axios.get method calls the API, then uses the `slice()` method to take the data from the API and create a new array, which is rendered to index.ejs and iterated through.
+  - How many Pokemon does the API call retrieve? 
+    - 20
+  - Why that many?
+    - According to the documentation, "Calling any API endpoint without a resource ID or name will return a paginated list of available resources for that API. By default, a list "page" will contain up to 20 resources"
   - What are the routes defined in the application?
+    - the GET home route, which calls the API and renders the index of Pokemon
+    - A GET and POST route in a Pokemon controller intended to render (READ) favorited pokemon and create a new entry for a favorited Pokemon
   - Think about adding a Pokemon to your favorites.
     - How will this data be submitted?
+      - POST route to a database for favorites
     - What will you have to do to save this data to a database?
+      - Create a sequelize model for a favorites database
     - What will you have to do to display favorite Pokemon?
+      - Render the properties of the favorites database using EJS
 
 ## User Stories
 
