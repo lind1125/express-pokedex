@@ -20,7 +20,7 @@ We'll be using an existing application that uses the [PokeAPI](http://pokeapi.co
 
 #### Read the Code
 
-- After setup, **STOP**. You're using an existing application, so make sure to read the code and ensure what the application does. Some questions you may want to ask yourself:
+- After setup, **STOP**. You're using an existing application, so make sure to read the code and ensure what the application does. Answer these questions you may want to ask yourself:
   - How does the app retrieve a list of Pokemon?
     - axios.get method calls the API, then uses the `slice()` method to take the data from the API and create a new array, which is rendered to index.ejs and iterated through.
   - How many Pokemon does the API call retrieve? 
@@ -62,6 +62,8 @@ Our data model needs only one attribute: `name`.
 1. Use the `sequelize model:create` command to make the `pokemon` model. This creates both the model JS and the migration JS files.
 2. Use the `sequelize db:migrate` command to apply the migrations.
 3. Confirm that your `database` and `model` are inside Postgres using the `terminal` or `Postico`
+
+Write this in the `node db-test.js` file.
 
 ```js
 // Make sure to require your models in the files where they will be used.
