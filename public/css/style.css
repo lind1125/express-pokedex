@@ -1,0 +1,40 @@
+body, .container {
+    background-color: rgb(2, 218, 218);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-between;
+    max-width: 80%;
+    margin: auto;
+
+}
+
+li {
+    margin: 3px;
+    padding: 5px;
+    font-size: 30px;
+    border: 2px solid yellow;
+    border-radius: 25px;
+    width: 25%;
+    background-color: rgb(183, 250, 174);
+}
+
+.well {
+    width: 50%;
+    margin: auto;
+}
+
+#to-favorites {
+    margin: 5px auto;
+    font-size: 20px;
+    background-color: gold;
+    width: 6em;
+    border-radius: 45px;
+}

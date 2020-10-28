@@ -1,0 +1,33 @@
+
+
+<h1>Pokemon Details</h1>
+
+<img src="<%= pokemon.sprites.other["official-artwork"].front_default %> " width=250px height=250px>
+
+<h2>
+    <%= pokemon.forms[0].name %> 
+</h2>
+<h3>Type:</h3>
+<ul>
+    <% pokemon.types.forEach(type =>{ %>
+        <li> 
+            <%= type.type.name %> 
+        </li>
+   <% }) %> 
+</ul>
+<h3>Abilities:</h3>
+<ul>
+    <% pokemon.abilities.forEach(ability =>{ %>
+        <li> 
+            <%= ability.ability.name %> 
+        </li>
+   <% }) %> 
+</ul>
+<h3>Moves:</h3>
+<ul>
+    <% pokemon.moves.forEach(move =>{ %>
+        <li> 
+            <%= move.move.name %> 
+        </li>
+   <% }) %> 
+</ul>
